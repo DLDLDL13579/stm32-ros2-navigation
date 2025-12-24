@@ -1,0 +1,336 @@
+[0.266s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.266s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7fbb96ee00>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fbbb644f0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fbbb644f0>>, mixin_verb=('build',))
+[0.726s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.727s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.727s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.727s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.727s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.727s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.727s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/orangepi/ros2_ws'
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.727s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.764s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.765s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extension 'ignore'
+[0.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extension 'ignore_ament_install'
+[0.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extensions ['colcon_pkg']
+[0.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extension 'colcon_pkg'
+[0.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extensions ['colcon_meta']
+[0.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extension 'colcon_meta'
+[0.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extensions ['ros']
+[0.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_bringup) by extension 'ros'
+[0.774s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_robot_bringup' with type 'ros.ament_python' and name 'my_robot_bringup'
+[0.774s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_slam) by extensions ['ignore', 'ignore_ament_install']
+[0.775s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_slam) by extension 'ignore'
+[0.775s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_slam) by extension 'ignore_ament_install'
+[0.775s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_slam) by extensions ['colcon_pkg']
+[0.775s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_slam) by extension 'colcon_pkg'
+[0.775s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_slam) by extensions ['colcon_meta']
+[0.775s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_slam) by extension 'colcon_meta'
+[0.775s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_slam) by extensions ['ros']
+[0.775s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_robot_slam) by extension 'ros'
+[0.777s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_robot_slam' with type 'ros.ament_python' and name 'my_robot_slam'
+[0.777s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.777s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller) by extension 'ignore'
+[0.777s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller) by extension 'ignore_ament_install'
+[0.777s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller) by extensions ['colcon_pkg']
+[0.777s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller) by extension 'colcon_pkg'
+[0.777s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller) by extensions ['colcon_meta']
+[0.778s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller) by extension 'colcon_meta'
+[0.778s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller) by extensions ['ros']
+[0.778s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_controller) by extension 'ros'
+[0.779s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_controller' with type 'ros.ament_python' and name 'robot_controller'
+[0.779s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros-ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros-ros2) by extension 'ignore'
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros-ros2) by extension 'ignore_ament_install'
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros-ros2) by extensions ['colcon_pkg']
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros-ros2) by extension 'colcon_pkg'
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros-ros2) by extensions ['colcon_meta']
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros-ros2) by extension 'colcon_meta'
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros-ros2) by extensions ['ros']
+[0.780s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros-ros2) by extension 'ros'
+[0.781s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rplidar_ros-ros2' with type 'ros.ament_cmake' and name 'rplidar_ros'
+[0.782s] Level 1:colcon.colcon_core.package_identification:_identify(src/stm32_keyboard_control) by extensions ['ignore', 'ignore_ament_install']
+[0.782s] Level 1:colcon.colcon_core.package_identification:_identify(src/stm32_keyboard_control) by extension 'ignore'
+[0.782s] Level 1:colcon.colcon_core.package_identification:_identify(src/stm32_keyboard_control) by extension 'ignore_ament_install'
+[0.782s] Level 1:colcon.colcon_core.package_identification:_identify(src/stm32_keyboard_control) by extensions ['colcon_pkg']
+[0.782s] Level 1:colcon.colcon_core.package_identification:_identify(src/stm32_keyboard_control) by extension 'colcon_pkg'
+[0.782s] Level 1:colcon.colcon_core.package_identification:_identify(src/stm32_keyboard_control) by extensions ['colcon_meta']
+[0.782s] Level 1:colcon.colcon_core.package_identification:_identify(src/stm32_keyboard_control) by extension 'colcon_meta'
+[0.782s] Level 1:colcon.colcon_core.package_identification:_identify(src/stm32_keyboard_control) by extensions ['ros']
+[0.782s] Level 1:colcon.colcon_core.package_identification:_identify(src/stm32_keyboard_control) by extension 'ros'
+[0.784s] DEBUG:colcon.colcon_core.package_identification:Package 'src/stm32_keyboard_control' with type 'ros.ament_python' and name 'stm32_keyboard_control'
+[0.784s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.784s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.784s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.784s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.784s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.847s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_args' from command line to 'None'
+[0.848s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_target' from command line to 'None'
+[0.848s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.848s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.848s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.848s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.848s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.848s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.848s] Level 5:colcon.colcon_core.verb:set package 'my_robot_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.848s] DEBUG:colcon.colcon_core.verb:Building package 'my_robot_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/orangepi/ros2_ws/build/my_robot_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/ros2_ws/install/my_robot_bringup', 'merge_install': False, 'path': '/home/orangepi/ros2_ws/src/my_robot_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.848s] Level 5:colcon.colcon_core.verb:set package 'robot_controller' build argument 'cmake_args' from command line to 'None'
+[0.848s] Level 5:colcon.colcon_core.verb:set package 'robot_controller' build argument 'cmake_target' from command line to 'None'
+[0.848s] Level 5:colcon.colcon_core.verb:set package 'robot_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.848s] Level 5:colcon.colcon_core.verb:set package 'robot_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'robot_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'robot_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'robot_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'robot_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'robot_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.849s] DEBUG:colcon.colcon_core.verb:Building package 'robot_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/orangepi/ros2_ws/build/robot_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/ros2_ws/install/robot_controller', 'merge_install': False, 'path': '/home/orangepi/ros2_ws/src/robot_controller', 'symlink_install': False, 'test_result_base': None}
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_args' from command line to 'None'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_target' from command line to 'None'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_clean_first' from command line to 'False'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_force_configure' from command line to 'False'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'ament_cmake_args' from command line to 'None'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.849s] DEBUG:colcon.colcon_core.verb:Building package 'rplidar_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/orangepi/ros2_ws/build/rplidar_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/ros2_ws/install/rplidar_ros', 'merge_install': False, 'path': '/home/orangepi/ros2_ws/src/rplidar_ros-ros2', 'symlink_install': False, 'test_result_base': None}
+[0.850s] Level 5:colcon.colcon_core.verb:set package 'stm32_keyboard_control' build argument 'cmake_args' from command line to 'None'
+[0.850s] Level 5:colcon.colcon_core.verb:set package 'stm32_keyboard_control' build argument 'cmake_target' from command line to 'None'
+[0.850s] Level 5:colcon.colcon_core.verb:set package 'stm32_keyboard_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.850s] Level 5:colcon.colcon_core.verb:set package 'stm32_keyboard_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.850s] Level 5:colcon.colcon_core.verb:set package 'stm32_keyboard_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.850s] Level 5:colcon.colcon_core.verb:set package 'stm32_keyboard_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.850s] Level 5:colcon.colcon_core.verb:set package 'stm32_keyboard_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.850s] Level 5:colcon.colcon_core.verb:set package 'stm32_keyboard_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.850s] Level 5:colcon.colcon_core.verb:set package 'stm32_keyboard_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.850s] DEBUG:colcon.colcon_core.verb:Building package 'stm32_keyboard_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/orangepi/ros2_ws/build/stm32_keyboard_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/ros2_ws/install/stm32_keyboard_control', 'merge_install': False, 'path': '/home/orangepi/ros2_ws/src/stm32_keyboard_control', 'symlink_install': False, 'test_result_base': None}
+[0.850s] Level 5:colcon.colcon_core.verb:set package 'my_robot_slam' build argument 'cmake_args' from command line to 'None'
+[0.850s] Level 5:colcon.colcon_core.verb:set package 'my_robot_slam' build argument 'cmake_target' from command line to 'None'
+[0.850s] Level 5:colcon.colcon_core.verb:set package 'my_robot_slam' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.850s] Level 5:colcon.colcon_core.verb:set package 'my_robot_slam' build argument 'cmake_clean_cache' from command line to 'False'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'my_robot_slam' build argument 'cmake_clean_first' from command line to 'False'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'my_robot_slam' build argument 'cmake_force_configure' from command line to 'False'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'my_robot_slam' build argument 'ament_cmake_args' from command line to 'None'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'my_robot_slam' build argument 'catkin_cmake_args' from command line to 'None'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'my_robot_slam' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.851s] DEBUG:colcon.colcon_core.verb:Building package 'my_robot_slam' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/orangepi/ros2_ws/build/my_robot_slam', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/ros2_ws/install/my_robot_slam', 'merge_install': False, 'path': '/home/orangepi/ros2_ws/src/my_robot_slam', 'symlink_install': False, 'test_result_base': None}
+[0.851s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.896s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.897s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/orangepi/ros2_ws/src/rplidar_ros-ros2' with build type 'ament_cmake'
+[0.897s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/orangepi/ros2_ws/src/rplidar_ros-ros2'
+[0.905s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.905s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.905s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.928s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/orangepi/ros2_ws/src/stm32_keyboard_control' with build type 'ament_python'
+[0.928s] Level 1:colcon.colcon_core.shell:create_environment_hook('stm32_keyboard_control', 'ament_prefix_path')
+[0.930s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/ros2_ws/install/stm32_keyboard_control/share/stm32_keyboard_control/hook/ament_prefix_path.ps1'
+[0.934s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/ros2_ws/install/stm32_keyboard_control/share/stm32_keyboard_control/hook/ament_prefix_path.dsv'
+[0.937s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/ros2_ws/install/stm32_keyboard_control/share/stm32_keyboard_control/hook/ament_prefix_path.sh'
+[0.939s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.940s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.947s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/orangepi/ros2_ws/src/my_robot_bringup' with build type 'ament_python'
+[0.947s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_robot_bringup', 'ament_prefix_path')
+[0.948s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/hook/ament_prefix_path.ps1'
+[0.949s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/hook/ament_prefix_path.dsv'
+[0.950s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/hook/ament_prefix_path.sh'
+[0.951s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.951s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.968s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/orangepi/ros2_ws/src/robot_controller' with build type 'ament_python'
+[0.970s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_controller', 'ament_prefix_path')
+[0.973s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/ros2_ws/install/robot_controller/share/robot_controller/hook/ament_prefix_path.ps1'
+[0.975s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/ros2_ws/install/robot_controller/share/robot_controller/hook/ament_prefix_path.dsv'
+[0.977s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/ros2_ws/install/robot_controller/share/robot_controller/hook/ament_prefix_path.sh'
+[0.979s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.980s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.006s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/ros2_ws/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orangepi/ros2_ws/install/my_robot_slam:/home/orangepi/ros2_ws/install/stm32_keyboard_control:/home/orangepi/ros2_ws/install/robot_controller:/home/orangepi/ros2_ws/install/my_robot_bringup:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/ros2_ws/build/rplidar_ros -- -j8 -l8
+[1.457s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/orangepi/ros2_ws/src/stm32_keyboard_control'
+[1.458s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.458s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.858s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/orangepi/ros2_ws/src/my_robot_bringup'
+[1.859s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.859s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.263s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/orangepi/ros2_ws/src/robot_controller'
+[2.264s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.264s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.272s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/ros2_ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orangepi/ros2_ws/install/my_robot_slam:/home/orangepi/ros2_ws/install/stm32_keyboard_control:/home/orangepi/ros2_ws/install/robot_controller:/home/orangepi/ros2_ws/install/my_robot_bringup:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/ros2_ws/build/rplidar_ros -- -j8 -l8
+[2.313s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/ros2_ws/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orangepi/ros2_ws/install/my_robot_slam:/home/orangepi/ros2_ws/install/stm32_keyboard_control:/home/orangepi/ros2_ws/install/robot_controller:/home/orangepi/ros2_ws/install/my_robot_bringup:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/ros2_ws/build/rplidar_ros
+[2.361s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rplidar_ros)
+[2.363s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/ros2_ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orangepi/ros2_ws/install/my_robot_slam:/home/orangepi/ros2_ws/install/stm32_keyboard_control:/home/orangepi/ros2_ws/install/robot_controller:/home/orangepi/ros2_ws/install/my_robot_bringup:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/ros2_ws/build/rplidar_ros
+[2.374s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/rplidar_ros' for CMake module files
+[2.376s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/rplidar_ros' for CMake config files
+[2.376s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'cmake_prefix_path')
+[2.377s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.ps1'
+[2.378s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.dsv'
+[2.379s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.sh'
+[2.382s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/rplidar_ros/lib'
+[2.382s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/rplidar_ros/bin'
+[2.382s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/rplidar_ros/lib/pkgconfig/rplidar_ros.pc'
+[2.383s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/rplidar_ros/lib/python3.10/site-packages'
+[2.384s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/rplidar_ros/bin'
+[2.385s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.ps1'
+[2.388s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.dsv'
+[2.390s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.sh'
+[2.393s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.bash'
+[2.396s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.zsh'
+[2.398s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/ros2_ws/install/rplidar_ros/share/colcon-core/packages/rplidar_ros)
+[2.400s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rplidar_ros)
+[2.401s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/rplidar_ros' for CMake module files
+[2.402s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/rplidar_ros' for CMake config files
+[2.402s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'cmake_prefix_path')
+[2.402s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.ps1'
+[2.404s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.dsv'
+[2.405s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.sh'
+[2.409s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/rplidar_ros/lib'
+[2.409s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/rplidar_ros/bin'
+[2.409s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/rplidar_ros/lib/pkgconfig/rplidar_ros.pc'
+[2.410s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/rplidar_ros/lib/python3.10/site-packages'
+[2.410s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/rplidar_ros/bin'
+[2.411s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.ps1'
+[2.412s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.dsv'
+[2.413s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.sh'
+[2.414s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.bash'
+[2.416s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.zsh'
+[2.417s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/ros2_ws/install/rplidar_ros/share/colcon-core/packages/rplidar_ros)
+[2.986s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/ros2_ws/src/robot_controller': PYTHONPATH=/home/orangepi/ros2_ws/build/robot_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_controller build --build-base /home/orangepi/ros2_ws/build/robot_controller/build install --record /home/orangepi/ros2_ws/build/robot_controller/install.log --single-version-externally-managed install_data
+[2.990s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/ros2_ws/src/stm32_keyboard_control': PYTHONPATH=/home/orangepi/ros2_ws/build/stm32_keyboard_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/stm32_keyboard_control build --build-base /home/orangepi/ros2_ws/build/stm32_keyboard_control/build install --record /home/orangepi/ros2_ws/build/stm32_keyboard_control/install.log --single-version-externally-managed install_data
+[2.992s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/ros2_ws/src/my_robot_bringup': PYTHONPATH=/home/orangepi/ros2_ws/build/my_robot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_ws/install/my_robot_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_robot_bringup build --build-base /home/orangepi/ros2_ws/build/my_robot_bringup/build install --record /home/orangepi/ros2_ws/build/my_robot_bringup/install.log --single-version-externally-managed install_data
+[3.449s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/robot_controller' for CMake module files
+[3.453s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/ros2_ws/src/robot_controller' returned '0': PYTHONPATH=/home/orangepi/ros2_ws/build/robot_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_controller build --build-base /home/orangepi/ros2_ws/build/robot_controller/build install --record /home/orangepi/ros2_ws/build/robot_controller/install.log --single-version-externally-managed install_data
+[3.454s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/robot_controller' for CMake config files
+[3.457s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/robot_controller/lib'
+[3.457s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/robot_controller/bin'
+[3.458s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/robot_controller/lib/pkgconfig/robot_controller.pc'
+[3.459s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages'
+[3.460s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_controller', 'pythonpath')
+[3.461s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/ros2_ws/install/robot_controller/share/robot_controller/hook/pythonpath.ps1'
+[3.464s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/ros2_ws/install/robot_controller/share/robot_controller/hook/pythonpath.dsv'
+[3.468s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/ros2_ws/install/robot_controller/share/robot_controller/hook/pythonpath.sh'
+[3.473s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/robot_controller/bin'
+[3.473s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_controller)
+[3.475s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/robot_controller/share/robot_controller/package.ps1'
+[3.478s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/ros2_ws/install/robot_controller/share/robot_controller/package.dsv'
+[3.480s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/robot_controller/share/robot_controller/package.sh'
+[3.482s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/robot_controller/share/robot_controller/package.bash'
+[3.484s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/robot_controller/share/robot_controller/package.zsh'
+[3.485s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/ros2_ws/install/robot_controller/share/colcon-core/packages/robot_controller)
+[3.492s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/my_robot_bringup' for CMake module files
+[3.495s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/ros2_ws/src/my_robot_bringup' returned '0': PYTHONPATH=/home/orangepi/ros2_ws/build/my_robot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_ws/install/my_robot_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_robot_bringup build --build-base /home/orangepi/ros2_ws/build/my_robot_bringup/build install --record /home/orangepi/ros2_ws/build/my_robot_bringup/install.log --single-version-externally-managed install_data
+[3.496s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/my_robot_bringup' for CMake config files
+[3.498s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/my_robot_bringup/lib'
+[3.498s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/my_robot_bringup/bin'
+[3.499s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/my_robot_bringup/lib/pkgconfig/my_robot_bringup.pc'
+[3.500s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/my_robot_bringup/lib/python3.10/site-packages'
+[3.500s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_robot_bringup', 'pythonpath')
+[3.501s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/hook/pythonpath.ps1'
+[3.502s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/hook/pythonpath.dsv'
+[3.504s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/hook/pythonpath.sh'
+[3.507s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/my_robot_bringup/bin'
+[3.507s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_robot_bringup)
+[3.509s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/package.ps1'
+[3.511s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/package.dsv'
+[3.513s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/package.sh'
+[3.514s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/package.bash'
+[3.516s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/my_robot_bringup/share/my_robot_bringup/package.zsh'
+[3.517s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/ros2_ws/install/my_robot_bringup/share/colcon-core/packages/my_robot_bringup)
+[3.519s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/stm32_keyboard_control' for CMake module files
+[3.524s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/ros2_ws/src/stm32_keyboard_control' returned '0': PYTHONPATH=/home/orangepi/ros2_ws/build/stm32_keyboard_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/stm32_keyboard_control build --build-base /home/orangepi/ros2_ws/build/stm32_keyboard_control/build install --record /home/orangepi/ros2_ws/build/stm32_keyboard_control/install.log --single-version-externally-managed install_data
+[3.525s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/stm32_keyboard_control' for CMake config files
+[3.528s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/stm32_keyboard_control/lib'
+[3.528s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/stm32_keyboard_control/bin'
+[3.529s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/pkgconfig/stm32_keyboard_control.pc'
+[3.530s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages'
+[3.531s] Level 1:colcon.colcon_core.shell:create_environment_hook('stm32_keyboard_control', 'pythonpath')
+[3.532s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/ros2_ws/install/stm32_keyboard_control/share/stm32_keyboard_control/hook/pythonpath.ps1'
+[3.535s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/ros2_ws/install/stm32_keyboard_control/share/stm32_keyboard_control/hook/pythonpath.dsv'
+[3.537s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/ros2_ws/install/stm32_keyboard_control/share/stm32_keyboard_control/hook/pythonpath.sh'
+[3.540s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/stm32_keyboard_control/bin'
+[3.540s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(stm32_keyboard_control)
+[3.541s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/stm32_keyboard_control/share/stm32_keyboard_control/package.ps1'
+[3.542s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/ros2_ws/install/stm32_keyboard_control/share/stm32_keyboard_control/package.dsv'
+[3.543s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/stm32_keyboard_control/share/stm32_keyboard_control/package.sh'
+[3.544s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/stm32_keyboard_control/share/stm32_keyboard_control/package.bash'
+[3.545s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/stm32_keyboard_control/share/stm32_keyboard_control/package.zsh'
+[3.546s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/ros2_ws/install/stm32_keyboard_control/share/colcon-core/packages/stm32_keyboard_control)
+[3.547s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/orangepi/ros2_ws/src/my_robot_slam' with build type 'ament_python'
+[3.548s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_robot_slam', 'ament_prefix_path')
+[3.548s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/ros2_ws/install/my_robot_slam/share/my_robot_slam/hook/ament_prefix_path.ps1'
+[3.551s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/ros2_ws/install/my_robot_slam/share/my_robot_slam/hook/ament_prefix_path.dsv'
+[3.553s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/ros2_ws/install/my_robot_slam/share/my_robot_slam/hook/ament_prefix_path.sh'
+[3.556s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.556s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.040s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/orangepi/ros2_ws/src/my_robot_slam'
+[4.042s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.043s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.647s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/ros2_ws/src/my_robot_slam': AMENT_PREFIX_PATH=/home/orangepi/ros2_ws/install/stm32_keyboard_control:/home/orangepi/ros2_ws/install/my_robot_slam:/home/orangepi/ros2_ws/install/rplidar_ros:/home/orangepi/ros2_ws/install/robot_controller:/home/orangepi/ros2_ws/install/my_robot_bringup:/opt/ros/humble PYTHONPATH=/home/orangepi/ros2_ws/build/my_robot_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_ws/install/my_robot_slam/lib/python3.10/site-packages:/home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages:/home/orangepi/ros2_ws/install/my_robot_slam/lib/python3.10/site-packages:/home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages:/home/orangepi/ros2_ws/install/my_robot_bringup/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_robot_slam build --build-base /home/orangepi/ros2_ws/build/my_robot_slam/build install --record /home/orangepi/ros2_ws/build/my_robot_slam/install.log --single-version-externally-managed install_data
+[5.096s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/my_robot_slam' for CMake module files
+[5.099s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/ros2_ws/src/my_robot_slam' returned '0': AMENT_PREFIX_PATH=/home/orangepi/ros2_ws/install/stm32_keyboard_control:/home/orangepi/ros2_ws/install/my_robot_slam:/home/orangepi/ros2_ws/install/rplidar_ros:/home/orangepi/ros2_ws/install/robot_controller:/home/orangepi/ros2_ws/install/my_robot_bringup:/opt/ros/humble PYTHONPATH=/home/orangepi/ros2_ws/build/my_robot_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_ws/install/my_robot_slam/lib/python3.10/site-packages:/home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages:/home/orangepi/ros2_ws/install/my_robot_slam/lib/python3.10/site-packages:/home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages:/home/orangepi/ros2_ws/install/my_robot_bringup/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_robot_slam build --build-base /home/orangepi/ros2_ws/build/my_robot_slam/build install --record /home/orangepi/ros2_ws/build/my_robot_slam/install.log --single-version-externally-managed install_data
+[5.101s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/my_robot_slam' for CMake config files
+[5.104s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/my_robot_slam/lib'
+[5.104s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/my_robot_slam/bin'
+[5.105s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/my_robot_slam/lib/pkgconfig/my_robot_slam.pc'
+[5.107s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/my_robot_slam/lib/python3.10/site-packages'
+[5.107s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_robot_slam', 'pythonpath')
+[5.109s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/ros2_ws/install/my_robot_slam/share/my_robot_slam/hook/pythonpath.ps1'
+[5.112s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/ros2_ws/install/my_robot_slam/share/my_robot_slam/hook/pythonpath.dsv'
+[5.114s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/ros2_ws/install/my_robot_slam/share/my_robot_slam/hook/pythonpath.sh'
+[5.119s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/ros2_ws/install/my_robot_slam/bin'
+[5.120s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_robot_slam)
+[5.122s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/my_robot_slam/share/my_robot_slam/package.ps1'
+[5.125s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/ros2_ws/install/my_robot_slam/share/my_robot_slam/package.dsv'
+[5.128s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/my_robot_slam/share/my_robot_slam/package.sh'
+[5.131s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/my_robot_slam/share/my_robot_slam/package.bash'
+[5.134s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/ros2_ws/install/my_robot_slam/share/my_robot_slam/package.zsh'
+[5.136s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/ros2_ws/install/my_robot_slam/share/colcon-core/packages/my_robot_slam)
+[5.140s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.142s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.142s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.143s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.173s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.174s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.174s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.192s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.194s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/orangepi/ros2_ws/install/local_setup.ps1'
+[5.201s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/orangepi/ros2_ws/install/_local_setup_util_ps1.py'
+[5.211s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/orangepi/ros2_ws/install/setup.ps1'
+[5.218s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/orangepi/ros2_ws/install/local_setup.sh'
+[5.222s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/orangepi/ros2_ws/install/_local_setup_util_sh.py'
+[5.226s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/orangepi/ros2_ws/install/setup.sh'
+[5.233s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/orangepi/ros2_ws/install/local_setup.bash'
+[5.236s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/orangepi/ros2_ws/install/setup.bash'
+[5.243s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/orangepi/ros2_ws/install/local_setup.zsh'
+[5.246s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/orangepi/ros2_ws/install/setup.zsh'

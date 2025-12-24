@@ -1,0 +1,5 @@
+[console_scripts]
+keyboard_controller = robot_controller.robot_controller:main
+robot_controller_stm32 = robot_controller.robot_controller_stm32:main
+stm32_interface = robot_controller.stm32_interface:main
+

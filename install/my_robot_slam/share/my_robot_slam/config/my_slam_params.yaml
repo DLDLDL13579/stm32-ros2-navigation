@@ -1,0 +1,56 @@
+# my_robot_slam/config/my_slam_params.yaml
+slam_toolbox:
+  ros__parameters:
+    # ========== TF帧配置 ==========
+    map_frame: map
+    odom_frame: odom  
+    base_frame: base_link
+    
+    # ========== 里程计设置 ==========
+    use_odom: true                    # 启用里程计数据
+    use_scan_matching: true           # 启用扫描匹配
+    use_pose_log: false               # 禁用姿态日志（减少计算量）
+    
+    # ========== 发布设置 ==========
+    publish_pose_graph: true          # 发布姿态图
+    publish_pose_array: true          # 发布姿态数组（用于调试）
+    publish_map: true                 # 发布地图
+    
+    # ========== 扫描匹配参数 ==========
+    scan_topic: /scan                 # 雷达话题
+    scan_queue_size: 1000            # 扫描队列大小
+    minimum_time_interval: 0.0        # 最小处理间隔（秒）
+    minimum_travel_distance: 0.1      # 最小移动距离（米）
+    minimum_travel_heading: 0.1       # 最小转向角度（弧度）
+    throttle_scans: 1 
+    
+    # ========== 地图参数 ==========
+    resolution: 0.05                  # 地图分辨率（米/像素）
+    max_laser_range: 18.0             # 最大激光范围（米）
+    transform_publish_period: 0.05    # TF发布周期
+    min_laser_range: 0.2
+    
+    # ========== 优化参数 ==========
+    optimizer: "ceres_solver"
+    solver_plugin: "solver_plugins::CeresSolver"
+    ceres_loss_function: "HuberLoss"
+
+    
+    # ========== 调试参数 ==========
+    debug_logging: false              # 调试日志
+    throttle_scans: 1                 # 扫描节流
+    map_update_interval: 1.0         # 地图更新间隔
+    
+    # ========== 循环闭合检测 ==========
+    do_loop_closing: true             # 启用循环闭合
+    loop_search_maximum_distance: 7.0 # 循环搜索最大距离
+    loop_match_minimum_chain_size: 10 # 最小匹配链大小
+    
+    # ========== 协方差参数 ==========
+    odom_linear_covariance: 0.5  # 里程计线速度协方差
+    odom_angular_covariance: 0.5  # 里程计角速度协方差
+    
+    # ========== 自适应参数 ==========
+    use_adaptive_resampling: true     # 使用自适应重采样
+    resample_interval: 2              # 重采样间隔
+    transform_timeout: 1.5           # 变换超时时间

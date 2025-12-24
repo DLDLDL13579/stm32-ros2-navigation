@@ -1,0 +1,24 @@
+[1.569s] Invoking command in '/home/orangepi/ros2_ws/src/stm32_keyboard_control': PYTHONPATH=/home/orangepi/ros2_ws/build/stm32_keyboard_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/stm32_keyboard_control build --build-base /home/orangepi/ros2_ws/build/stm32_keyboard_control/build install --record /home/orangepi/ros2_ws/build/stm32_keyboard_control/install.log --single-version-externally-managed install_data
+[1.877s] running egg_info
+[1.879s] writing ../../build/stm32_keyboard_control/stm32_keyboard_control.egg-info/PKG-INFO
+[1.879s] writing dependency_links to ../../build/stm32_keyboard_control/stm32_keyboard_control.egg-info/dependency_links.txt
+[1.881s] writing entry points to ../../build/stm32_keyboard_control/stm32_keyboard_control.egg-info/entry_points.txt
+[1.881s] writing requirements to ../../build/stm32_keyboard_control/stm32_keyboard_control.egg-info/requires.txt
+[1.882s] writing top-level names to ../../build/stm32_keyboard_control/stm32_keyboard_control.egg-info/top_level.txt
+[1.887s] reading manifest file '../../build/stm32_keyboard_control/stm32_keyboard_control.egg-info/SOURCES.txt'
+[1.889s] writing manifest file '../../build/stm32_keyboard_control/stm32_keyboard_control.egg-info/SOURCES.txt'
+[1.889s] running build
+[1.889s] running build_py
+[1.890s] copying stm32_keyboard_control/keyboard_control_node.py -> /home/orangepi/ros2_ws/build/stm32_keyboard_control/build/lib/stm32_keyboard_control
+[1.890s] running install
+[1.891s] running install_lib
+[1.892s] copying /home/orangepi/ros2_ws/build/stm32_keyboard_control/build/lib/stm32_keyboard_control/keyboard_control_node.py -> /home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages/stm32_keyboard_control
+[1.893s] byte-compiling /home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages/stm32_keyboard_control/keyboard_control_node.py to keyboard_control_node.cpython-310.pyc
+[1.904s] running install_data
+[1.904s] running install_egg_info
+[1.908s] removing '/home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages/stm32_keyboard_control-0.0.0-py3.10.egg-info' (and everything under it)
+[1.909s] Copying ../../build/stm32_keyboard_control/stm32_keyboard_control.egg-info to /home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages/stm32_keyboard_control-0.0.0-py3.10.egg-info
+[1.912s] running install_scripts
+[1.952s] Installing keyboard_control_node script to /home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/stm32_keyboard_control
+[1.953s] writing list of installed files to '/home/orangepi/ros2_ws/build/stm32_keyboard_control/install.log'
+[2.097s] Invoked command in '/home/orangepi/ros2_ws/src/stm32_keyboard_control' returned '0': PYTHONPATH=/home/orangepi/ros2_ws/build/stm32_keyboard_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/stm32_keyboard_control build --build-base /home/orangepi/ros2_ws/build/stm32_keyboard_control/build install --record /home/orangepi/ros2_ws/build/stm32_keyboard_control/install.log --single-version-externally-managed install_data

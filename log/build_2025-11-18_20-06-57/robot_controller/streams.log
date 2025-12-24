@@ -1,0 +1,23 @@
+[2.157s] Invoking command in '/home/orangepi/ros2_ws/src/robot_controller': PYTHONPATH=/home/orangepi/ros2_ws/build/robot_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_controller build --build-base /home/orangepi/ros2_ws/build/robot_controller/build install --record /home/orangepi/ros2_ws/build/robot_controller/install.log --single-version-externally-managed install_data
+[2.512s] running egg_info
+[2.514s] writing ../../build/robot_controller/robot_controller.egg-info/PKG-INFO
+[2.515s] writing dependency_links to ../../build/robot_controller/robot_controller.egg-info/dependency_links.txt
+[2.516s] writing entry points to ../../build/robot_controller/robot_controller.egg-info/entry_points.txt
+[2.517s] writing requirements to ../../build/robot_controller/robot_controller.egg-info/requires.txt
+[2.518s] writing top-level names to ../../build/robot_controller/robot_controller.egg-info/top_level.txt
+[2.524s] reading manifest file '../../build/robot_controller/robot_controller.egg-info/SOURCES.txt'
+[2.526s] writing manifest file '../../build/robot_controller/robot_controller.egg-info/SOURCES.txt'
+[2.526s] running build
+[2.526s] running build_py
+[2.526s] running install
+[2.527s] running install_lib
+[2.531s] running install_data
+[2.531s] running install_egg_info
+[2.536s] removing '/home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages/robot_controller-0.0.0-py3.10.egg-info' (and everything under it)
+[2.552s] Copying ../../build/robot_controller/robot_controller.egg-info to /home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages/robot_controller-0.0.0-py3.10.egg-info
+[2.553s] running install_scripts
+[2.591s] Installing keyboard_controller script to /home/orangepi/ros2_ws/install/robot_controller/lib/robot_controller
+[2.592s] Installing robot_controller_stm32 script to /home/orangepi/ros2_ws/install/robot_controller/lib/robot_controller
+[2.593s] Installing stm32_interface script to /home/orangepi/ros2_ws/install/robot_controller/lib/robot_controller
+[2.594s] writing list of installed files to '/home/orangepi/ros2_ws/build/robot_controller/install.log'
+[2.697s] Invoked command in '/home/orangepi/ros2_ws/src/robot_controller' returned '0': PYTHONPATH=/home/orangepi/ros2_ws/build/robot_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_controller build --build-base /home/orangepi/ros2_ws/build/robot_controller/build install --record /home/orangepi/ros2_ws/build/robot_controller/install.log --single-version-externally-managed install_data

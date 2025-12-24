@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: stm32-keyboard-control
+Version: 0.0.0
+Summary: Keyboard control for STM32 via serial port
+Home-page: UNKNOWN
+Maintainer: dl
+Maintainer-email: dl@todo.todo
+License: TODO: License declaration
+Platform: UNKNOWN
+Provides-Extra: test
+
+UNKNOWN
+

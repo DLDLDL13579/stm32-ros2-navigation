@@ -1,0 +1,48 @@
+[1.906s] Invoking command in '/home/orangepi/ros2_ws/src/robot_controller': PYTHONPATH=/home/orangepi/ros2_ws/build/robot_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_controller build --build-base /home/orangepi/ros2_ws/build/robot_controller/build install --record /home/orangepi/ros2_ws/build/robot_controller/install.log --single-version-externally-managed install_data
+[2.243s] running egg_info
+[2.248s] creating ../../build/robot_controller/robot_controller.egg-info
+[2.249s] writing ../../build/robot_controller/robot_controller.egg-info/PKG-INFO
+[2.250s] writing dependency_links to ../../build/robot_controller/robot_controller.egg-info/dependency_links.txt
+[2.251s] writing entry points to ../../build/robot_controller/robot_controller.egg-info/entry_points.txt
+[2.251s] writing requirements to ../../build/robot_controller/robot_controller.egg-info/requires.txt
+[2.252s] writing top-level names to ../../build/robot_controller/robot_controller.egg-info/top_level.txt
+[2.253s] writing manifest file '../../build/robot_controller/robot_controller.egg-info/SOURCES.txt'
+[2.261s] reading manifest file '../../build/robot_controller/robot_controller.egg-info/SOURCES.txt'
+[2.261s] writing manifest file '../../build/robot_controller/robot_controller.egg-info/SOURCES.txt'
+[2.262s] running build
+[2.262s] running build_py
+[2.262s] creating /home/orangepi/ros2_ws/build/robot_controller/build
+[2.263s] creating /home/orangepi/ros2_ws/build/robot_controller/build/lib
+[2.263s] creating /home/orangepi/ros2_ws/build/robot_controller/build/lib/robot_controller
+[2.263s] copying robot_controller/robot_controller_stm32.py -> /home/orangepi/ros2_ws/build/robot_controller/build/lib/robot_controller
+[2.264s] copying robot_controller/stm32_interface.py -> /home/orangepi/ros2_ws/build/robot_controller/build/lib/robot_controller
+[2.264s] copying robot_controller/teleop_publisher.py -> /home/orangepi/ros2_ws/build/robot_controller/build/lib/robot_controller
+[2.265s] copying robot_controller/robot_controller.py -> /home/orangepi/ros2_ws/build/robot_controller/build/lib/robot_controller
+[2.265s] copying robot_controller/__init__.py -> /home/orangepi/ros2_ws/build/robot_controller/build/lib/robot_controller
+[2.265s] running install
+[2.266s] running install_lib
+[2.267s] creating /home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages/robot_controller
+[2.268s] copying /home/orangepi/ros2_ws/build/robot_controller/build/lib/robot_controller/robot_controller_stm32.py -> /home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages/robot_controller
+[2.268s] copying /home/orangepi/ros2_ws/build/robot_controller/build/lib/robot_controller/stm32_interface.py -> /home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages/robot_controller
+[2.268s] copying /home/orangepi/ros2_ws/build/robot_controller/build/lib/robot_controller/teleop_publisher.py -> /home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages/robot_controller
+[2.269s] copying /home/orangepi/ros2_ws/build/robot_controller/build/lib/robot_controller/robot_controller.py -> /home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages/robot_controller
+[2.269s] copying /home/orangepi/ros2_ws/build/robot_controller/build/lib/robot_controller/__init__.py -> /home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages/robot_controller
+[2.269s] byte-compiling /home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages/robot_controller/robot_controller_stm32.py to robot_controller_stm32.cpython-310.pyc
+[2.270s] byte-compiling /home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages/robot_controller/stm32_interface.py to stm32_interface.cpython-310.pyc
+[2.270s] byte-compiling /home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages/robot_controller/teleop_publisher.py to teleop_publisher.cpython-310.pyc
+[2.270s] byte-compiling /home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages/robot_controller/robot_controller.py to robot_controller.cpython-310.pyc
+[2.271s] byte-compiling /home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages/robot_controller/__init__.py to __init__.cpython-310.pyc
+[2.271s] running install_data
+[2.271s] creating /home/orangepi/ros2_ws/install/robot_controller/share/ament_index
+[2.272s] creating /home/orangepi/ros2_ws/install/robot_controller/share/ament_index/resource_index
+[2.272s] creating /home/orangepi/ros2_ws/install/robot_controller/share/ament_index/resource_index/packages
+[2.273s] copying resource/robot_controller -> /home/orangepi/ros2_ws/install/robot_controller/share/ament_index/resource_index/packages
+[2.273s] copying package.xml -> /home/orangepi/ros2_ws/install/robot_controller/share/robot_controller
+[2.273s] running install_egg_info
+[2.274s] Copying ../../build/robot_controller/robot_controller.egg-info to /home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages/robot_controller-0.0.0-py3.10.egg-info
+[2.274s] running install_scripts
+[2.331s] Installing keyboard_controller script to /home/orangepi/ros2_ws/install/robot_controller/lib/robot_controller
+[2.332s] Installing robot_controller_stm32 script to /home/orangepi/ros2_ws/install/robot_controller/lib/robot_controller
+[2.333s] Installing stm32_interface script to /home/orangepi/ros2_ws/install/robot_controller/lib/robot_controller
+[2.334s] writing list of installed files to '/home/orangepi/ros2_ws/build/robot_controller/install.log'
+[2.474s] Invoked command in '/home/orangepi/ros2_ws/src/robot_controller' returned '0': PYTHONPATH=/home/orangepi/ros2_ws/build/robot_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_ws/install/robot_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/robot_controller build --build-base /home/orangepi/ros2_ws/build/robot_controller/build install --record /home/orangepi/ros2_ws/build/robot_controller/install.log --single-version-externally-managed install_data

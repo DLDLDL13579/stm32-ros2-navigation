@@ -1,0 +1,4 @@
+[console_scripts]
+robot_controller = robot_controller.robot_controller:main
+teleop_publisher = robot_controller.teleop_publisher:main
+

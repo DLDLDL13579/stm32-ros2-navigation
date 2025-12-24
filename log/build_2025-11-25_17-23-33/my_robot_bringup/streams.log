@@ -1,0 +1,19 @@
+[1.715s] Invoking command in '/home/orangepi/ros2_ws/src/my_robot_bringup': PYTHONPATH=/home/orangepi/ros2_ws/build/my_robot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_ws/install/my_robot_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_robot_bringup build --build-base /home/orangepi/ros2_ws/build/my_robot_bringup/build install --record /home/orangepi/ros2_ws/build/my_robot_bringup/install.log --single-version-externally-managed install_data
+[2.062s] running egg_info
+[2.063s] writing ../../build/my_robot_bringup/my_robot_bringup.egg-info/PKG-INFO
+[2.065s] writing dependency_links to ../../build/my_robot_bringup/my_robot_bringup.egg-info/dependency_links.txt
+[2.067s] writing entry points to ../../build/my_robot_bringup/my_robot_bringup.egg-info/entry_points.txt
+[2.068s] writing requirements to ../../build/my_robot_bringup/my_robot_bringup.egg-info/requires.txt
+[2.069s] writing top-level names to ../../build/my_robot_bringup/my_robot_bringup.egg-info/top_level.txt
+[2.074s] reading manifest file '../../build/my_robot_bringup/my_robot_bringup.egg-info/SOURCES.txt'
+[2.076s] writing manifest file '../../build/my_robot_bringup/my_robot_bringup.egg-info/SOURCES.txt'
+[2.078s] running build
+[2.079s] running build_py
+[2.079s] running install
+[2.080s] running install_lib
+[2.081s] running install_data
+[2.082s] running install_egg_info
+[2.086s] removing '/home/orangepi/ros2_ws/install/my_robot_bringup/lib/python3.10/site-packages/my_robot_bringup-0.0.0-py3.10.egg-info' (and everything under it)
+[2.087s] Copying ../../build/my_robot_bringup/my_robot_bringup.egg-info to /home/orangepi/ros2_ws/install/my_robot_bringup/lib/python3.10/site-packages/my_robot_bringup-0.0.0-py3.10.egg-info
+[2.088s] running install_scripts
+[2.134s] writing list of installed files to '/home/orangepi/ros2_ws/build/my_robot_bringup/install.log'

@@ -1,0 +1,40 @@
+running egg_info
+creating ../../build/stm32_keyboard_control/stm32_keyboard_control.egg-info
+writing ../../build/stm32_keyboard_control/stm32_keyboard_control.egg-info/PKG-INFO
+writing dependency_links to ../../build/stm32_keyboard_control/stm32_keyboard_control.egg-info/dependency_links.txt
+writing entry points to ../../build/stm32_keyboard_control/stm32_keyboard_control.egg-info/entry_points.txt
+writing requirements to ../../build/stm32_keyboard_control/stm32_keyboard_control.egg-info/requires.txt
+writing top-level names to ../../build/stm32_keyboard_control/stm32_keyboard_control.egg-info/top_level.txt
+writing manifest file '../../build/stm32_keyboard_control/stm32_keyboard_control.egg-info/SOURCES.txt'
+reading manifest file '../../build/stm32_keyboard_control/stm32_keyboard_control.egg-info/SOURCES.txt'
+writing manifest file '../../build/stm32_keyboard_control/stm32_keyboard_control.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/orangepi/ros2_ws/build/stm32_keyboard_control/build
+creating /home/orangepi/ros2_ws/build/stm32_keyboard_control/build/lib
+creating /home/orangepi/ros2_ws/build/stm32_keyboard_control/build/lib/stm32_keyboard_control
+copying stm32_keyboard_control/keyboard_control_node.py -> /home/orangepi/ros2_ws/build/stm32_keyboard_control/build/lib/stm32_keyboard_control
+copying stm32_keyboard_control/keyboard_control_node copy.py -> /home/orangepi/ros2_ws/build/stm32_keyboard_control/build/lib/stm32_keyboard_control
+copying stm32_keyboard_control/__init__.py -> /home/orangepi/ros2_ws/build/stm32_keyboard_control/build/lib/stm32_keyboard_control
+running install
+running install_lib
+creating /home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages/stm32_keyboard_control
+copying /home/orangepi/ros2_ws/build/stm32_keyboard_control/build/lib/stm32_keyboard_control/keyboard_control_node.py -> /home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages/stm32_keyboard_control
+copying /home/orangepi/ros2_ws/build/stm32_keyboard_control/build/lib/stm32_keyboard_control/keyboard_control_node copy.py -> /home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages/stm32_keyboard_control
+copying /home/orangepi/ros2_ws/build/stm32_keyboard_control/build/lib/stm32_keyboard_control/__init__.py -> /home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages/stm32_keyboard_control
+byte-compiling /home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages/stm32_keyboard_control/keyboard_control_node.py to keyboard_control_node.cpython-310.pyc
+byte-compiling /home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages/stm32_keyboard_control/keyboard_control_node copy.py to keyboard_control_node copy.cpython-310.pyc
+byte-compiling /home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages/stm32_keyboard_control/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/orangepi/ros2_ws/install/stm32_keyboard_control/share/ament_index
+creating /home/orangepi/ros2_ws/install/stm32_keyboard_control/share/ament_index/resource_index
+creating /home/orangepi/ros2_ws/install/stm32_keyboard_control/share/ament_index/resource_index/packages
+copying resource/stm32_keyboard_control -> /home/orangepi/ros2_ws/install/stm32_keyboard_control/share/ament_index/resource_index/packages
+copying package.xml -> /home/orangepi/ros2_ws/install/stm32_keyboard_control/share/stm32_keyboard_control
+creating /home/orangepi/ros2_ws/install/stm32_keyboard_control/share/stm32_keyboard_control/launch
+copying launch/teleop_mapping.launch.py -> /home/orangepi/ros2_ws/install/stm32_keyboard_control/share/stm32_keyboard_control/launch
+running install_egg_info
+Copying ../../build/stm32_keyboard_control/stm32_keyboard_control.egg-info to /home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages/stm32_keyboard_control-0.0.0-py3.10.egg-info
+running install_scripts
+Installing keyboard_control_node script to /home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/stm32_keyboard_control
+writing list of installed files to '/home/orangepi/ros2_ws/build/stm32_keyboard_control/install.log'

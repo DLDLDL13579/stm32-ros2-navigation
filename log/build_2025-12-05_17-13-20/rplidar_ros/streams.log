@@ -1,0 +1,55 @@
+[0.035s] Invoking command in '/home/orangepi/ros2_ws/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orangepi/ros2_ws/install/my_robot_slam:/home/orangepi/ros2_ws/install/stm32_keyboard_control:/home/orangepi/ros2_ws/install/robot_controller:/home/orangepi/ros2_ws/install/my_robot_bringup:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/ros2_ws/build/rplidar_ros -- -j8 -l8
+[0.494s] [ 47%] Built target rplidar_node
+[0.494s] [ 52%] Built target rplidar_client
+[0.494s] [100%] Built target rplidar_composition
+[0.914s] Invoked command in '/home/orangepi/ros2_ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orangepi/ros2_ws/install/my_robot_slam:/home/orangepi/ros2_ws/install/stm32_keyboard_control:/home/orangepi/ros2_ws/install/robot_controller:/home/orangepi/ros2_ws/install/my_robot_bringup:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/ros2_ws/build/rplidar_ros -- -j8 -l8
+[0.953s] Invoking command in '/home/orangepi/ros2_ws/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orangepi/ros2_ws/install/my_robot_slam:/home/orangepi/ros2_ws/install/stm32_keyboard_control:/home/orangepi/ros2_ws/install/robot_controller:/home/orangepi/ros2_ws/install/my_robot_bringup:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/ros2_ws/build/rplidar_ros
+[0.988s] -- Install configuration: ""
+[0.988s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch
+[0.989s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a1_launch.py
+[0.989s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a3_launch.py
+[0.989s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m7_launch.py
+[0.989s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_t1_launch.py
+[0.989s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_tcp_launch.py
+[0.989s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s2_launch.py
+[0.989s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m12_launch.py
+[0.989s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m7_launch.py
+[0.989s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s3_launch.py
+[0.989s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m8_launch.py
+[0.990s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s1_launch.py
+[0.990s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s3_launch.py
+[0.990s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_c1_launch.py
+[0.990s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a3_launch.py
+[0.990s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s2e_launch.py
+[0.990s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_s2e_launch.py
+[0.990s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_t1_launch.py
+[0.990s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s2_launch.py
+[0.990s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_launch.py
+[0.990s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_s1_tcp_launch.py
+[0.990s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a2m8_launch.py
+[0.990s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_c1_launch.py
+[0.990s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a1_launch.py
+[0.990s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/rplidar_a2m12_launch.py
+[0.990s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/rviz
+[0.991s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/rviz/rplidar_ros.rviz
+[0.991s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/lib/rplidar_ros/rplidar_node
+[0.991s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/lib/rplidar_ros/rplidar_composition
+[0.991s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/lib/rplidar_ros/rplidar_client
+[0.991s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/package_run_dependencies/rplidar_ros
+[0.991s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/parent_prefix_path/rplidar_ros
+[0.991s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.sh
+[0.991s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/ament_prefix_path.dsv
+[0.991s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/path.sh
+[0.991s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/environment/path.dsv
+[0.992s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.bash
+[0.992s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.sh
+[0.992s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.zsh
+[0.992s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/local_setup.dsv
+[0.992s] -- Installing: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.dsv
+[0.992s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/ament_index/resource_index/packages/rplidar_ros
+[0.992s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.992s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.992s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig.cmake
+[0.992s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/cmake/rplidar_rosConfig-version.cmake
+[0.992s] -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/package.xml
+[0.995s] Invoked command in '/home/orangepi/ros2_ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orangepi/ros2_ws/install/my_robot_slam:/home/orangepi/ros2_ws/install/stm32_keyboard_control:/home/orangepi/ros2_ws/install/robot_controller:/home/orangepi/ros2_ws/install/my_robot_bringup:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/ros2_ws/build/rplidar_ros

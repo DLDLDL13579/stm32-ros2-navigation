@@ -1,0 +1,20 @@
+[2.045s] Invoking command in '/home/orangepi/ros2_ws/src/my_robot_bringup': PYTHONPATH=/home/orangepi/ros2_ws/build/my_robot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_ws/install/my_robot_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_robot_bringup build --build-base /home/orangepi/ros2_ws/build/my_robot_bringup/build install --record /home/orangepi/ros2_ws/build/my_robot_bringup/install.log --single-version-externally-managed install_data
+[2.382s] running egg_info
+[2.384s] writing ../../build/my_robot_bringup/my_robot_bringup.egg-info/PKG-INFO
+[2.385s] writing dependency_links to ../../build/my_robot_bringup/my_robot_bringup.egg-info/dependency_links.txt
+[2.388s] writing entry points to ../../build/my_robot_bringup/my_robot_bringup.egg-info/entry_points.txt
+[2.389s] writing requirements to ../../build/my_robot_bringup/my_robot_bringup.egg-info/requires.txt
+[2.389s] writing top-level names to ../../build/my_robot_bringup/my_robot_bringup.egg-info/top_level.txt
+[2.396s] reading manifest file '../../build/my_robot_bringup/my_robot_bringup.egg-info/SOURCES.txt'
+[2.398s] writing manifest file '../../build/my_robot_bringup/my_robot_bringup.egg-info/SOURCES.txt'
+[2.399s] running build
+[2.400s] running build_py
+[2.401s] running install
+[2.401s] running install_lib
+[2.404s] running install_data
+[2.404s] running install_egg_info
+[2.410s] removing '/home/orangepi/ros2_ws/install/my_robot_bringup/lib/python3.10/site-packages/my_robot_bringup-0.0.0-py3.10.egg-info' (and everything under it)
+[2.410s] Copying ../../build/my_robot_bringup/my_robot_bringup.egg-info to /home/orangepi/ros2_ws/install/my_robot_bringup/lib/python3.10/site-packages/my_robot_bringup-0.0.0-py3.10.egg-info
+[2.413s] running install_scripts
+[2.464s] writing list of installed files to '/home/orangepi/ros2_ws/build/my_robot_bringup/install.log'
+[2.547s] Invoked command in '/home/orangepi/ros2_ws/src/my_robot_bringup' returned '0': PYTHONPATH=/home/orangepi/ros2_ws/build/my_robot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_ws/install/my_robot_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_robot_bringup build --build-base /home/orangepi/ros2_ws/build/my_robot_bringup/build install --record /home/orangepi/ros2_ws/build/my_robot_bringup/install.log --single-version-externally-managed install_data

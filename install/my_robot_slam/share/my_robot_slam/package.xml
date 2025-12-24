@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypelocation="http://www.ros.org/schema/package_format3.xsd"?>
+<package format="3">
+  <name>my_robot_slam</name>
+  <version>0.0.0</version>
+  <description>My Robot SLAM package</description>
+  <maintainer email="you@example.com">Your Name</maintainer>
+  <license>Apache-2.0</license>
+
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>tf2_ros</depend>
+  <depend>slam_toolbox</depend>
+  <depend>rplidar_ros</depend>
+  <depend>stm32_keyboard_control</depend>
+  
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
