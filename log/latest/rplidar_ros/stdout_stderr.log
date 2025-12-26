@@ -1,6 +1,6 @@
 [  5%] Built target rplidar_client
-[ 52%] Built target rplidar_node
-[100%] Built target rplidar_composition
+[ 86%] Built target rplidar_composition
+[100%] Built target rplidar_node
 -- Install configuration: ""
 -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch
 -- Up-to-date: /home/orangepi/ros2_ws/install/rplidar_ros/share/rplidar_ros/launch/view_rplidar_a1_launch.py

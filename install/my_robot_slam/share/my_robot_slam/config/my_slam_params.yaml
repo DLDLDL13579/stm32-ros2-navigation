@@ -48,9 +48,10 @@ slam_toolbox:
     
     # ========== 协方差参数 ==========
     odom_linear_covariance: 0.5  # 里程计线速度协方差
-    odom_angular_covariance: 0.5  # 里程计角速度协方差
+    odom_angular_covariance: 1  # 里程计角速度协方差
     
     # ========== 自适应参数 ==========
     use_adaptive_resampling: true     # 使用自适应重采样
     resample_interval: 2              # 重采样间隔
-    transform_timeout: 1.5           # 变换超时时间
+    transform_timeout: 0.5           # 变换超时时间
+    tf_buffer_duration: 30.0

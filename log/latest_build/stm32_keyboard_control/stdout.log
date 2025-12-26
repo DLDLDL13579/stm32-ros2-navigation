@@ -8,11 +8,8 @@ reading manifest file '../../build/stm32_keyboard_control/stm32_keyboard_control
 writing manifest file '../../build/stm32_keyboard_control/stm32_keyboard_control.egg-info/SOURCES.txt'
 running build
 running build_py
-copying stm32_keyboard_control/keyboard_control_node.py -> /home/orangepi/ros2_ws/build/stm32_keyboard_control/build/lib/stm32_keyboard_control
 running install
 running install_lib
-copying /home/orangepi/ros2_ws/build/stm32_keyboard_control/build/lib/stm32_keyboard_control/keyboard_control_node.py -> /home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages/stm32_keyboard_control
-byte-compiling /home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages/stm32_keyboard_control/keyboard_control_node.py to keyboard_control_node.cpython-310.pyc
 running install_data
 running install_egg_info
 removing '/home/orangepi/ros2_ws/install/stm32_keyboard_control/lib/python3.10/site-packages/stm32_keyboard_control-0.0.0-py3.10.egg-info' (and everything under it)

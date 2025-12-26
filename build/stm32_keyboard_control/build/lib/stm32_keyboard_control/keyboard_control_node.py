@@ -210,7 +210,11 @@ class FourWheelEKFNode(Node):
                 # 原始数据减去零偏
                 # 【注意】：Z轴取反以符合 ROS 右手坐标系 (逆时针为正)
                 gyro_z_raw_corrected = raw_gz - self.gyro_bias[2]
-                gyro_z_rad = - (gyro_z_raw_corrected / self.GYRO_SCALE)
+                # 原系数 GYRO_SCALE 算出的角度偏大约 1.05 倍 (平均值)
+                # 所以我们将分母扩大 1.05 倍，让结果变小
+                calibration_factor = 1.05 
+                corrected_scale = self.GYRO_SCALE * calibration_factor
+                gyro_z_rad = - (gyro_z_raw_corrected / corrected_scale)
 
                 # 加速度处理
                 accel_x = (raw_ax - self.accel_bias[0]) / self.ACCEL_SCALE
