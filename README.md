@@ -1,203 +1,246 @@
+# STM32 ROS 2 Navigation System
 
-
-# 🤖 STM32 ROS 2 Navigation System
-### 基于 Event-Replay EKF 的移动机器人自主导航方案
+### 基于 Event-Replay 融合的移动机器人 SLAM 上位机
 
 [![ROS2](https://img.shields.io/badge/ROS2-Humble-blue?logo=ros&logoColor=white)](https://docs.ros.org/en/humble/)
 [![STM32](https://img.shields.io/badge/Hardware-STM32F103-green?logo=stmicroelectronics&logoColor=white)](https://www.st.com/)
 [![Python](https://img.shields.io/badge/Language-Python_3.10-yellow?logo=python&logoColor=white)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 
-[核心特性] • [硬件架构] • [安装构建] • [快速开始] • [常见问题]
-
-
-
-## 📖 项目简介 (Introduction)
-
-本项目是基于 **STM32底层控制** 与 **ROS 2 Humble** 上位机的完整移动机器人解决方案。专为低成本**差速/滑移转向 (Skid-Steer)** 底盘设计，重点解决了低成本硬件中常见的**时间不同步**与**里程计漂移**问题。
-
-核心亮点在于实现了 **Event-Replay EKF (事件回放式融合算法)**，在存在通信延迟的情况下，仍能保证毫秒级的姿态估算精度。
+> ROS 2 Humble 上位机工作区：通过串口读取 STM32 的编码器与 IMU，
+> 做**基于硬件时间戳的事件回放式融合**，产出 `/odom` 与 TF，配合 slam_toolbox 建图。
+>
+> 配套的 STM32 底层固件在另一个仓库 **`stm32-robot-base`**。
 
 ---
 
-## ✨ 核心特性 (Key Features)
+## 目录
 
-### 1. 🧠 Event-Replay EKF (事件回放融合)
-解决了传统 EKF 因串口通信延迟导致的时序混乱问题：
-* **乱序重排**：利用 STM32 硬件毫秒级时间戳，对 Odom 和 IMU 数据进行严格的时间序列重排。
-* **历史回放**：在状态更新时，严格按照物理事件发生的顺序回放数据，确保“先旋转后平移”的积分计算精确无误。
-
-### 2. 🎯 针对性里程计校正
-针对滑移转向底盘的物理缺陷进行了多重算法补偿：
-* **滑移补偿 (`skid_steer_slip_factor`)**：修正因轮胎横向摩擦导致的旋转角度不足（默认系数 1.6）。
-* **线性修正 (`linear_correction_factor`)**：修正轮胎形变导致的直线行驶误差。
-* **死区过滤**：底层固件配合上位机算法，滤除静止时的编码器抖动噪点。
-
-### 3. ⏳ 软硬件全栈时间同步
-* 启动握手时自动发送 `T<timestamp>` 指令，计算上位机与 MCU 的时钟偏差，确保 TF 变换树的时间戳精准对齐，消除 `Extrapolation into the future` 警告。
+- [系统结构](#系统结构)
+- [工作区包说明](#工作区包说明)
+- [核心机制：Event-Replay 融合](#核心机制event-replay-融合)
+- [坐标系与 TF](#坐标系与-tf)
+- [话题一览](#话题一览)
+- [安装与构建](#安装与构建)
+- [快速开始](#快速开始)
+- [常见问题](#常见问题)
+- [归属与许可证](#归属与许可证)
 
 ---
 
-## 🛠️ 硬件架构 (Hardware)
-
-| 组件 | 推荐型号/参数 | 备注 |
-| :--- | :--- | :--- |
-| **上位机** | Orange Pi 5 / PC | Ubuntu 22.04 (ROS 2 Humble) |
-| **底层主控** | STM32F103RCT6 | 负责电机 PID 闭环与传感器采集 |
-| **激光雷达** | RPLIDAR S2 / A1 / A2 | 2D SLAM 建图与避障 |
-| **IMU** | MPU6050 / GY-85 | 6轴姿态数据 (Yaw角积分) |
-| **底盘结构** | 4轮差速 / 履带式 | 霍尔编码器 (330脉冲/圈) |
-
----
-
-## 📦 安装与构建 (Installation)
-
-### 1. 系统依赖
-```bash
-# 安装 ROS 2 Navigation2 及 SLAM 相关依赖
-sudo apt update
-sudo apt install ros-humble-slam-toolbox ros-humble-navigation2 ros-humble-nav2-bringup ros-humble-xacro
-
-# 安装 Python 串口通信库
-pip3 install pynput serial pyserial numpy
-
-```
-
-### 2. 克隆与编译
-
-```bash
-mkdir -p ~/ros2_ws/src
-cd ~/ros2_ws/src
-
-# 克隆本仓库
-git clone [https://github.com/DLDLDL13579/stm32-robot-base.git](https://github.com/DLDLDL13579/stm32-robot-base.git)
-
-cd ..
-# 使用 symlink 安装 (便于调试 Python 代码无需重复编译)
-colcon build --symlink-install
-source install/setup.bash
-
-```
-
-### 3. 串口权限配置
-
-为保证 ROS 节点能访问硬件，需配置 USB 权限（建议配置 udev 规则，此处为临时方案）：
-
-```bash
-sudo chmod 777 /dev/ttyUSB*
-
-```
-
----
-
-## 🚀 快速开始 (Quick Start)
-
-### 一键启动 SLAM 建图
-
-该 Launch 文件将自动启动：底层驱动、传感器融合节点、SLAM Toolbox 及 RViz2。
-
-```bash
-ros2 launch my_robot_slam slam_mapping.launch.py
-
-```
-
-### ⌨️ 键盘控制
-
-程序启动后，终端将进入监听模式。请保持终端窗口处于**激活状态**：
-
-| 按键 | 功能 | 说明 |
-| --- | --- | --- |
-| **`W`** | 前进 | 线性速度增加 |
-| **`S`** | 后退 | 线性速度减少 |
-| **`A`** | 左转 | 角速度增加 |
-| **`D`** | 右转 | 角速度减少 |
-| **`SPACE`** | **急停** | 速度强制置零 |
-| **`ESC`** | 退出 | 关闭节点 |
-
-> **提示**：你也可以另开一个终端使用标准话题控制：
-> ```bash
-> ros2 topic pub /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.2}, angular: {z: 0.0}}"
-> 
-> ```
-> 
-> 
-
----
-
-## ⚙️ 参数配置 (Configuration)
-
-核心物理参数位于 `src/my_robot_slam/launch/slam_mapping.launch.py`，请务必根据实际车辆修改：
-
-```python
-# 车辆物理参数
-'wheel_base': '0.18',     # 前后轮轴距 (m)
-'wheel_track': '0.17',    # 左右轮轮距 (m)
-'wheel_radius': '0.0335', # 轮胎半径 (m)
-
-# 编码器参数
-'pulses_per_revolution': '1320.0', # 一圈总脉冲数 (线数 x 减速比 x 4)
-
-# 校准参数
-'skid_steer_slip_factor': '1.6',   # 滑移转向补偿 (值越大，计算出的旋转角度越小)
-
-```
-
----
-
-## 📡 通信协议 (Protocol)
-
-上位机与 STM32 采用 **ASCII 字符串** 交互，波特率 **115200**。
-
-### 1. 上行数据 (STM32 -> ROS)
-
-| 标识头 | 格式示例 | 说明 |
-| --- | --- | --- |
-| **编码器** | `/four_wheel_encoder,100,100,100,100,12345` | 四轮脉冲累计值 + 时间戳 |
-| **IMU** | `/imu_data,120,30,16384,5,-2,1,25,12345` | 加速度, 角速度, 温度, 时间戳 |
-
-### 2. 下行指令 (ROS -> STM32)
-
-* **运动控制**：直接发送字符 `W`, `S`, `A`, `D`, `SPACE` (急停)。
-* **时间同步**：`T<timestamp>` (例如 `T1703421500`)，用于对齐系统时间。
-
----
-
-## 📊 坐标系 (TF Tree)
-
-系统严格遵循 [ROS REP-105](https://www.ros.org/reps/rep-0105.html) 标准：
+## 系统结构
 
 ```mermaid
-graph TD;
-    map(map) -->|SLAM Toolbox| odom(odom);
-    odom -->|EKF Fusion| base_link(base_link);
-    base_link -->|Static TF| laser(laser_frame);
-    base_link -->|Static TF| imu_link(imu_link);
-    
-    style map fill:#f9f,stroke:#333,stroke-width:2px
-    style base_link fill:#bbf,stroke:#333,stroke-width:2px
+graph TB
+    subgraph MCU["STM32 底层（配套仓库 stm32-robot-base）"]
+        FW["固件：采集四轮编码器 + MPU6050<br/>USART1 115200 ASCII"]
+    end
 
+    subgraph ROS2["ROS 2 Humble 上位机（本仓库）"]
+        KCN["keyboard_control_node<br/>FourWheelEKFNode<br/>src/stm32_keyboard_control"]
+        RPL["rplidar_node<br/>src/rplidar_ros-ros2（上游包）"]
+        SLAM["async_slam_toolbox_node<br/>slam_toolbox"]
+        RVIZ["rviz2"]
+        TF1["static: base_link → laser"]
+        TF2["static: base_link → imu_link"]
+    end
+
+    FW -->|"USB 串口 /dev/ttyUSB0"| KCN
+    KCN -->|"/odom (nav_msgs/Odometry)"| SLAM
+    KCN -->|"/imu/data_raw (sensor_msgs/Imu)"| SLAM
+    KCN -->|"TF odom → base_link"| SLAM
+    RPL -->|"/scan (sensor_msgs/LaserScan)"| SLAM
+    SLAM -->|"TF map → odom"| RVIZ
+    TF1 --> RVIZ
+    TF2 --> RVIZ
+    KCN -.->|"下发 W/S/A/D、空格、T&lt;ms&gt;"| FW
 ```
 
 ---
 
-## ❓ 常见问题 (FAQ)
+## 工作区包说明
+
+`src/` 下共 3 个包：
+
+| 包 | 类型 | 内容 |
+|---|---|---|
+| **`stm32_keyboard_control`** | ament_python | **核心**：串口解析、时间同步、事件回放融合、键盘遥控。节点 `keyboard_control_node`（类 `FourWheelEKFNode`，`keyboard_control_node.py`，624 行） |
+| **`my_robot_slam`** | ament_python | **无节点**（`setup.py` 的 `console_scripts` 为空），仅承载 launch / config / rviz 配置 |
+| **`rplidar_ros`** | ament_cmake | **上游第三方包**（目录名 `rplidar_ros-ros2`），见 [归属与许可证](#归属与许可证) |
+
+---
+
+## 核心机制：Event-Replay 融合
+
+低成本串口链路存在**通信延迟**，编码器与 IMU 数据到达上位机的顺序可能与真实发生顺序不一致，直接积分会导致姿态解算错误。
+
+本项目的处理方式是：STM32 在每帧数据里附带的**毫秒级硬件时间戳**（`stm32_ts`），上位机把它和编码器 / IMU 数据一起入缓冲，融合前先按时间戳排序再回放。
+
+```mermaid
+sequenceDiagram
+    participant MCU as STM32
+    participant BUF as 上位机缓冲队列
+    participant FUSE as ekf_update()
+    MCU->>BUF: /four_wheel_encoder,... (含 stm32_ts)
+    MCU->>BUF: /imu_data,... (含 stm32_ts)
+    Note over BUF: 到达顺序可能被通信延迟打乱
+    FUSE->>BUF: 取出 imu_buffer / encoder_buffer
+    FUSE->>FUSE: events.sort(key=lambda x: x['stm32_ts'])
+    FUSE->>FUSE: 按物理发生顺序回放积分
+    FUSE->>FUSE: 发布 /odom + TF odom→base_link
+```
+
+关键代码位置（`keyboard_control_node.py`）：
+
+| 方法 | 行号附近 | 作用 |
+|---|---|---|
+| `parse_four_wheel_data()` | 132 | 解析编码器帧，打包 `{'type', 'stm32_ts', ...}` 入 `encoder_buffer` |
+| `parse_imu_data()` | 179 | 解析 IMU 帧，取 `parts[8]` 为 `stm32_ts`，入 `imu_buffer` |
+| `ekf_update()` | 273 | 合并两个缓冲，`events.sort(key=lambda x: x['stm32_ts'])` 后按序回放 |
+| `publish_odometry()` | 339 | 发布 `nav_msgs/Odometry` 与 TF |
+| `publish_imu_data()` | 386 | 发布 `sensor_msgs/Imu` |
+| `sync_stm32_time()` | 422 | 下发 `T<ms>` 完成上下位机时间同步 |
+
+> **说明**：该方法按硬件时间戳重排后做**角度赋值 + 位移积分**，
+> 并非严格意义上的卡尔曼滤波（无协方差预测 / 更新与增益计算）。
+> 名称沿用代码中的 `FourWheelEKFNode` 与 `ekf_update`。
+
+---
+
+## 坐标系与 TF
+
+```mermaid
+graph LR
+    MAP["map"] -->|"slam_toolbox"| ODOM["odom"]
+    ODOM -->|"keyboard_control_node<br/>动态广播"| BASE["base_link"]
+    BASE -->|"static (0.1, 0, 0.15)"| LASER["laser"]
+    BASE -->|"static (0.05, 0, 0.1)"| IMU["imu_link"]
+```
+
+静态 TF 来自 `src/my_robot_slam/launch/slam_mapping.launch.py`：
+
+| 父 → 子 | 平移 (x, y, z) |
+|---|---|
+| `base_link` → `laser` | `0.1, 0, 0.15` |
+| `base_link` → `imu_link` | `0.05, 0, 0.1` |
+
+帧名可通过参数覆盖：`odom_frame_id`（默认 `odom`）、`base_frame_id`（默认 `base_link`）、`imu_frame_id`（默认 `imu_link`）。
+
+---
+
+## 话题一览
+
+| 话题 | 类型 | 方向 | 来源 |
+|---|---|---|---|
+| `/odom` | `nav_msgs/Odometry` | 发布 | `keyboard_control_node` |
+| `/imu/data_raw` | `sensor_msgs/Imu` | 发布 | `keyboard_control_node` |
+| `/scan` | `sensor_msgs/LaserScan` | 发布 | `rplidar_node` |
+| `/tf`、`/tf_static` | — | 发布 | 融合节点 + static_transform_publisher |
+
+串口参数（默认）：`/dev/ttyUSB0`，波特率 **115200**。
+
+雷达参数（`slam_mapping.launch.py` 中设定）：`serial_baudrate` **1000000**、`frame_id` `laser`、`scan_mode` `DenseBoost`。
+
+---
+
+## 安装与构建
+
+```bash
+mkdir -p ~/ros2_ws/src && cd ~/ros2_ws/src
+git clone https://github.com/DLDLDL13579/stm32-ros2-navigation.git
+cd ~/ros2_ws
+rosdep install --from-paths src --ignore-src -r -y
+colcon build --symlink-install
+source install/setup.bash
+```
+
+依赖：`rclpy`、`std_msgs`、`geometry_msgs`、`nav_msgs`、`sensor_msgs`、`tf2_ros`、
+`slam_toolbox`、`rplidar_ros`（随仓库提供）、`pyserial`。
+
+> 注意：`build/`、`install/`、`log/` 为 colcon 构建产物，**当前已被 git 跟踪**；
+> 建议加入 `.gitignore` 后清理，可显著减小仓库体积。
+
+---
+
+## 快速开始
+
+```bash
+source ~/ros2_ws/install/setup.bash
+ros2 launch my_robot_slam slam_mapping.launch.py
+```
+
+该 launch（151 行）会一并启动：
+
+1. `keyboard_control_node`（串口解析 + 融合）
+2. `rplidar_node`（雷达）
+3. `async_slam_toolbox_node`（slam_toolbox 建图）
+4. `rviz2`（加载预设配置）
+5. `static_transform_publisher` ×2（laser、imu_link）
+6. `tf2_monitor`（监视 `map` → `base_link`）
+
+SLAM 参数见 `src/my_robot_slam/config/my_slam_params.yaml`（`scan_topic: /scan`，分辨率 `0.05`）。
+
+键盘遥控在 `keyboard_control_node` 内实现（`on_key_press` / `on_key_release`），按键映射为 `W` / `S` / `A` / `D`，松开或超时自动停止。
+
+---
+
+## 常见问题
 
 <details>
-<summary><strong>Q1: 机器人实际旋转 90 度，但 RViz 中只显示 60 度？</strong></summary>
+<summary><strong>Q1: 串口打不开 / 没有 /odom？</strong></summary>
 
-这是滑移转向底盘的常见物理特性。
-**解决方法**：增大 `skid_steer_slip_factor` 参数（例如从 1.6 调至 2.0），直到 RViz 显示角度与实际一致。
+1. 确认设备节点：`ls /dev/ttyUSB*`，必要时用参数覆盖 `serial_port`
+2. 确认波特率与底层一致（115200）
+3. 当前用户需有串口权限：`sudo usermod -aG dialout $USER`（重新登录后生效）
 
 </details>
 
 <details>
-<summary><strong>Q2: 建图时地图出现重影或跳变？</strong></summary>
+<summary><strong>Q2: 建图出现重影或跳变？</strong></summary>
 
-1. 检查 IMU 是否校准（静止启动等待 3-5 秒）。
-2. 确认雷达 TF (`laser_to_base_link`) 安装位置参数是否准确。
-3. 检查 STM32 底层是否在静止时仍有微小脉冲输出（需在底层开启死区过滤）。
+1. 检查 IMU 是否校准（静止启动等待 3–5 秒）
+2. 确认雷达 TF（`base_link` → `laser`）安装位置参数是否准确
+3. 检查 STM32 底层静止时是否仍有微小脉冲输出（需在底层开启死区过滤，
+   见配套仓库 `stm32-robot-base`）
 
 </details>
+
+<details>
+<summary><strong>Q3: 融合节点在哪个包？</strong></summary>
+
+在 **`stm32_keyboard_control`**（`keyboard_control_node.py`）。
+`my_robot_slam` 只包含 launch / config / rviz，本身没有节点。
+
+</details>
+
+---
+
+## 归属与许可证
+
+- **本仓库根目录没有 LICENSE 文件**，因此不声明统一许可证，各包以其自身声明为准：
+
+| 包 | 声明 |
+|---|---|
+| `my_robot_slam` | `package.xml` 中声明 `Apache-2.0`（仓库内无对应 LICENSE 文件） |
+| `stm32_keyboard_control` | `package.xml` 中声明 `TODO: License declaration`（**尚未确定**） |
+| `rplidar_ros` | **BSD**，附独立 `LICENSE` 文件 |
+
+- **`rplidar_ros` 为上游第三方包**（目录名 `rplidar_ros-ros2`，version 2.1.4，
+  maintainer `deyou.wang@slamtec.com`，author `ros@slamtec.com`）。
+  其 `LICENSE` 明确版权为：
+  **Copyright (c) 2009–2014 RoboPeak Team**、
+  **Copyright (c) 2014–2018 Shanghai Slamtec Co., Ltd.**，遵循 BSD 条款。
+  该包的权利归原作者所有，本仓库仅随工作区一并引入。
+- 雷达产品图 `src/rplidar_ros-ros2/rplidar_A1.png`、`rplidar_A2.png` 同样来自该上游包。
+
+---
+
+## 代码规模
+
+| 文件 | 行数 |
+|---|---|
+| `src/stm32_keyboard_control/stm32_keyboard_control/keyboard_control_node.py` | 624 |
+| `src/my_robot_slam/launch/slam_mapping.launch.py` | 151 |
+| `src/my_robot_slam/config/my_slam_params.yaml` | 57 |
 
 ---
 
@@ -205,14 +248,6 @@ graph TD;
 
 **Project**: Undergraduate Thesis - Lidar SLAM Robot
 
-
-
-
-
 **Author**: Deng Lin
 
 </div>
-
-```
-
-```
