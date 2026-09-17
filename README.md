@@ -52,7 +52,7 @@ graph TB
     SLAM -->|"TF map → odom"| RVIZ
     TF1 --> RVIZ
     TF2 --> RVIZ
-    KCN -.->|"下发 W/S/A/D、空格、T&lt;ms&gt;"| FW
+    KCN -.->|"下发 W/S/A/D、空格、T 毫秒时间戳"| FW
 ```
 
 ---
